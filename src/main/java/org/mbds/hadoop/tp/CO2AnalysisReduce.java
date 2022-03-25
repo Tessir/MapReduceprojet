@@ -39,6 +39,6 @@ public class CO2AnalysisReduce extends Reducer<Text, Text, Text, Text>
 		float meanRejet = sommeRejetC02/count;
 		float meanCout  = sommeCoutenergie/count;
 
-		context.write(key, new Text( meanmalus +","+ meanRejet + "," + meanCout));
+		context.write(key, new Text( meanmalus +"\t"+ meanRejet + "\t" + meanCout));
   }
 }
