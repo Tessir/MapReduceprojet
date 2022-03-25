@@ -45,7 +45,7 @@ public class CO2AnalysisMap extends Mapper<Object, Text, Text, Text> {
 		int malus_int =Integer.parseInt(malus);
 		String new_value = malus_int + "," + rejetCO2 + "," + coutenergie;
 		context.write(new Text(marque), new Text(new_value));
-		context.write(new Text("MeanFil"), new Text(new_value));
+		context.write(new Text("MeanFile"), new Text(new_value));
 		}
 
 		private String getDigit(String value) {

@@ -25,7 +25,8 @@ public class CO2Analysis
 	{
 		// Cr���� un object de configuration Hadoop.
 		Configuration conf=new Configuration();
-		// Permet �� Hadoop de lire ses arguments g��n��riques, r��cup��re les arguments restants dans ourArgs.
+		conf.set("mapreduce.input.keyvaluelinerecordreader.key.value.separator", ",");
+				// Permet �� Hadoop de lire ses arguments g��n��riques, r��cup��re les arguments restants dans ourArgs.
 		String[] ourArgs=new GenericOptionsParser(conf, args).getRemainingArgs();
 		// Obtient un nouvel objet Job: une t��che Hadoop. On fourni la configuration Hadoop ainsi qu'une description
 		// textuelle de la t��che.
